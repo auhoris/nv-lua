@@ -32,9 +32,41 @@ local function try_loadstring(s, component, name)
 end
 
 _G.packer_plugins = {
+  ["ayu-vim"] = {
+    loaded = true,
+    path = "/Users/vlados_paperos/.local/share/nvim/site/pack/packer/start/ayu-vim"
+  },
+  ["barbar.nvim"] = {
+    loaded = true,
+    path = "/Users/vlados_paperos/.local/share/nvim/site/pack/packer/start/barbar.nvim"
+  },
+  ["far.vim"] = {
+    loaded = true,
+    path = "/Users/vlados_paperos/.local/share/nvim/site/pack/packer/start/far.vim"
+  },
   ["galaxyline.nvim"] = {
     loaded = true,
     path = "/Users/vlados_paperos/.local/share/nvim/site/pack/packer/start/galaxyline.nvim"
+  },
+  ["gitsigns.nvim"] = {
+    loaded = true,
+    path = "/Users/vlados_paperos/.local/share/nvim/site/pack/packer/start/gitsigns.nvim"
+  },
+  ["hop.nvim"] = {
+    loaded = true,
+    path = "/Users/vlados_paperos/.local/share/nvim/site/pack/packer/start/hop.nvim"
+  },
+  kommentary = {
+    loaded = true,
+    path = "/Users/vlados_paperos/.local/share/nvim/site/pack/packer/start/kommentary"
+  },
+  ["lspkind-nvim"] = {
+    loaded = true,
+    path = "/Users/vlados_paperos/.local/share/nvim/site/pack/packer/start/lspkind-nvim"
+  },
+  ["lspsaga.nvim"] = {
+    loaded = true,
+    path = "/Users/vlados_paperos/.local/share/nvim/site/pack/packer/start/lspsaga.nvim"
   },
   ["nvcode-color-schemes.vim"] = {
     loaded = true,
@@ -44,10 +76,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/vlados_paperos/.local/share/nvim/site/pack/packer/start/nvim-autopairs"
   },
-  ["nvim-bufferline.lua"] = {
-    loaded = true,
-    path = "/Users/vlados_paperos/.local/share/nvim/site/pack/packer/start/nvim-bufferline.lua"
-  },
   ["nvim-compe"] = {
     loaded = true,
     path = "/Users/vlados_paperos/.local/share/nvim/site/pack/packer/start/nvim-compe"
@@ -56,6 +84,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/vlados_paperos/.local/share/nvim/site/pack/packer/start/nvim-lspconfig"
   },
+  ["nvim-lspinstall"] = {
+    loaded = true,
+    path = "/Users/vlados_paperos/.local/share/nvim/site/pack/packer/start/nvim-lspinstall"
+  },
   ["nvim-treesitter"] = {
     loaded = true,
     path = "/Users/vlados_paperos/.local/share/nvim/site/pack/packer/start/nvim-treesitter"
@@ -63,6 +95,10 @@ _G.packer_plugins = {
   ["nvim-web-devicons"] = {
     loaded = true,
     path = "/Users/vlados_paperos/.local/share/nvim/site/pack/packer/start/nvim-web-devicons"
+  },
+  ["omni.vim"] = {
+    loaded = true,
+    path = "/Users/vlados_paperos/.local/share/nvim/site/pack/packer/start/omni.vim"
   },
   ["packer.nvim"] = {
     loaded = false,
@@ -77,6 +113,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/vlados_paperos/.local/share/nvim/site/pack/packer/start/popup.nvim"
   },
+  ["snippets.nvim"] = {
+    loaded = true,
+    path = "/Users/vlados_paperos/.local/share/nvim/site/pack/packer/start/snippets.nvim"
+  },
   ["telescope-media-files.nvim"] = {
     loaded = true,
     path = "/Users/vlados_paperos/.local/share/nvim/site/pack/packer/start/telescope-media-files.nvim"
@@ -84,6 +124,18 @@ _G.packer_plugins = {
   ["telescope.nvim"] = {
     loaded = true,
     path = "/Users/vlados_paperos/.local/share/nvim/site/pack/packer/start/telescope.nvim"
+  },
+  ["vim-startify"] = {
+    loaded = true,
+    path = "/Users/vlados_paperos/.local/share/nvim/site/pack/packer/start/vim-startify"
+  },
+  ["vim-vsnip"] = {
+    loaded = true,
+    path = "/Users/vlados_paperos/.local/share/nvim/site/pack/packer/start/vim-vsnip"
+  },
+  ["vim-vsnip-integ"] = {
+    loaded = true,
+    path = "/Users/vlados_paperos/.local/share/nvim/site/pack/packer/start/vim-vsnip-integ"
   }
 }
 

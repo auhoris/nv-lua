@@ -31,3 +31,21 @@ vim.api.nvim_set_keymap('i', 'kj', '<ESC>', {noremap = true, silent = true})
 -- Moving lines in vis mode
 vim.api.nvim_set_keymap('x', 'K', ':move \'<-1<CR>gv-gv\'', {noremap = true, silent = true})
 vim.api.nvim_set_keymap('x', 'J', ':move \'>+1<CR>gv-gv\'', {noremap = true, silent = true})
+
+-- Create new file in curr dir
+
+vim.api.nvim_set_keymap('n', '<C-e>', ':tabnew <C-r>=expand("%:p:h")<CR>/', {noremap = true, silent = true})
+--vim.api.nvim_set_keymap('n', '<Leader>md', ':!mkdir -p ', {noremap = true, silent = true})
+--vim.api.nvim_set_keymap('n', '<Leader>nf', ':!touch ', {noremap = true, silent = true})
+
+-- Splits
+vim.api.nvim_set_keymap('n', '<Leader>v', ':vsplit<CR>', {silent = true})
+vim.api.nvim_set_keymap('n', '<Leader>s', ':split<CR>', {silent = true})
+
+-- resize with arrows
+vim.cmd([[
+  nnoremap <silent> <C-Up>    :resize +2<CR>
+  nnoremap <silent> <C-Down>  :resize -2<CR>
+  nnoremap <silent> <C-Left>  :vertical resize +2<CR>
+  nnoremap <silent> <C-Right> :vertical resize -2<CR>
+]])
