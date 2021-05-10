@@ -34,8 +34,8 @@ vim.cmd('nnoremap <silent> <C-p> :Lspsaga diagnostic_jump_prev<CR>')
 vim.cmd('nnoremap <silent> <C-n> :Lspsaga diagnostic_jump_next<CR>')
 
 -- Open terminal
-vim.cmd('nnoremap <silent> <Leader>t :Lspsaga open_floaterm<CR>')
-vim.cmd('tnoremap <silent> <Leader>t <C-\\><C-n>:Lspsaga close_floaterm<CR>')
+--[[ vim.cmd('nnoremap <silent> <Leader>t :Lspsaga open_floaterm<CR>')
+vim.cmd('tnoremap <silent> <Leader>t <C-\\><C-n>:Lspsaga close_floaterm<CR>') ]]
 -- scroll down hover doc or scroll in definition preview
 --vim.cmd('nnoremap <silent> <C-f> <cmd>lua require(\'lspsaga.action\').smart_scroll_with_saa(1)<CR>')
 -- scroll up hover doc

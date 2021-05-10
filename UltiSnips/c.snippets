@@ -1,0 +1,61 @@
+#includes and defines
+snippet inc "include" i
+#include <$1.h>
+endsnippet
+
+
+# loops
+snippet fori "for loop" i
+for (int i = 0; i < ${1:count}; i++)
+{
+	${2:loop};
+}
+endsnippet
+
+snippet wh "while loop" i
+while ($1)
+{
+	$2;
+}
+endsnippet
+
+
+# functions
+snippet voidf "void funcion" i
+void	${1: func_name}(${2:args})
+{
+	$3;
+}
+endsnippet
+
+snippet intf "int funcion" i
+int	${1: func_name}(${2:args})
+{
+	$3;
+}
+endsnippet
+
+
+# prints
+snippet prd "print for decimal" i
+printf("$1 = %d\n", $1);
+endsnippet
+
+snippet prf "print for float" i
+printf("$1 = %f\n", $1);
+endsnippet
+
+snippet prs "line printf" i
+printf("${1:your_line} = %s\n", $1);
+endsnippet
+
+snippet pr "common printf" i
+printf("${1:%s}\n");
+endsnippet
+	
+	
+#general
+snippet ret "norm return" i
+return ($1);
+endsnippet
+	

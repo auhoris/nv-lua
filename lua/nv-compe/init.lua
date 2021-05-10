@@ -1,3 +1,5 @@
+vim.o.completeopt="menuone,noselect"
+
 require'compe'.setup {
   enabled = true;
   autocomplete = true;
@@ -17,6 +19,7 @@ require'compe'.setup {
     buffer = true;
     calc = true;
     vsnip = true;
+    ultisnips = true;
     nvim_lsp = true;
     nvim_lua = true;
     spell = true;

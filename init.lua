@@ -16,7 +16,24 @@ require('nv-kommentary')
 require('nv-hop')
 require('nv-lspkind')
 require('nv-startify')
+require('nv-ultisnips')
+require('nv-floaterm')
+require('nv-deoplete')
+require('nv-dashboard')
+
+-- vim scripts
+vim.cmd('source ~/.config/nvim/vimscript/42header.vim')
+vim.cmd('packadd! gruvbox-material')
+
+-- Debug
+require('nv-dapconfig')
+require('nv-dapconfig.my_debug')
+require('nv-dapconfig.mappings')
+-- require('nv-dapconfig.lldbconfig')
 
 --lsp
 require('lsp')
+-- require('nv-lspinstall')
 require('lsp.clangd-ls')
+require('lsp.python-ls')
+-- require('lsp.lua-ls')
