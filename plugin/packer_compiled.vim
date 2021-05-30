@@ -47,8 +47,8 @@ local function save_profiles(threshold)
 end
 
 time("Luarocks path setup", true)
-local package_path_str = "/Users/vlados_paperos/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?.lua;/Users/vlados_paperos/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?/init.lua;/Users/vlados_paperos/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?.lua;/Users/vlados_paperos/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?/init.lua"
-local install_cpath_pattern = "/Users/vlados_paperos/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/lua/5.1/?.so"
+local package_path_str = "/Users/auhoris/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?.lua;/Users/auhoris/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?/init.lua;/Users/auhoris/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?.lua;/Users/auhoris/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?/init.lua"
+local install_cpath_pattern = "/Users/auhoris/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/lua/5.1/?.so"
 if not string.find(package.path, package_path_str, 1, true) then
   package.path = package.path .. ';' .. package_path_str
 end
@@ -73,140 +73,144 @@ time("Defining packer_plugins", true)
 _G.packer_plugins = {
   ["42header"] = {
     loaded = true,
-    path = "/Users/vlados_paperos/.local/share/nvim/site/pack/packer/start/42header"
+    path = "/Users/auhoris/.local/share/nvim/site/pack/packer/start/42header"
   },
   ["ayu-vim"] = {
     loaded = true,
-    path = "/Users/vlados_paperos/.local/share/nvim/site/pack/packer/start/ayu-vim"
+    path = "/Users/auhoris/.local/share/nvim/site/pack/packer/start/ayu-vim"
   },
   ["barbar.nvim"] = {
     loaded = true,
-    path = "/Users/vlados_paperos/.local/share/nvim/site/pack/packer/start/barbar.nvim"
+    path = "/Users/auhoris/.local/share/nvim/site/pack/packer/start/barbar.nvim"
   },
   ["dashboard-nvim"] = {
     loaded = true,
-    path = "/Users/vlados_paperos/.local/share/nvim/site/pack/packer/start/dashboard-nvim"
+    path = "/Users/auhoris/.local/share/nvim/site/pack/packer/start/dashboard-nvim"
   },
   ["far.vim"] = {
     loaded = true,
-    path = "/Users/vlados_paperos/.local/share/nvim/site/pack/packer/start/far.vim"
-  },
-  ["galaxyline.nvim"] = {
-    loaded = true,
-    path = "/Users/vlados_paperos/.local/share/nvim/site/pack/packer/start/galaxyline.nvim"
+    path = "/Users/auhoris/.local/share/nvim/site/pack/packer/start/far.vim"
   },
   ["gitsigns.nvim"] = {
     loaded = true,
-    path = "/Users/vlados_paperos/.local/share/nvim/site/pack/packer/start/gitsigns.nvim"
+    path = "/Users/auhoris/.local/share/nvim/site/pack/packer/start/gitsigns.nvim"
   },
   ["gruvbox-material"] = {
     loaded = true,
-    path = "/Users/vlados_paperos/.local/share/nvim/site/pack/packer/start/gruvbox-material"
+    path = "/Users/auhoris/.local/share/nvim/site/pack/packer/start/gruvbox-material"
   },
   ["hop.nvim"] = {
     loaded = true,
-    path = "/Users/vlados_paperos/.local/share/nvim/site/pack/packer/start/hop.nvim"
+    path = "/Users/auhoris/.local/share/nvim/site/pack/packer/start/hop.nvim"
   },
   kommentary = {
     loaded = true,
-    path = "/Users/vlados_paperos/.local/share/nvim/site/pack/packer/start/kommentary"
+    path = "/Users/auhoris/.local/share/nvim/site/pack/packer/start/kommentary"
   },
   ["lspkind-nvim"] = {
     loaded = true,
-    path = "/Users/vlados_paperos/.local/share/nvim/site/pack/packer/start/lspkind-nvim"
+    path = "/Users/auhoris/.local/share/nvim/site/pack/packer/start/lspkind-nvim"
   },
   ["lspsaga.nvim"] = {
     loaded = true,
-    path = "/Users/vlados_paperos/.local/share/nvim/site/pack/packer/start/lspsaga.nvim"
+    path = "/Users/auhoris/.local/share/nvim/site/pack/packer/start/lspsaga.nvim"
+  },
+  ["lualine.nvim"] = {
+    loaded = true,
+    path = "/Users/auhoris/.local/share/nvim/site/pack/packer/start/lualine.nvim"
   },
   ["nvcode-color-schemes.vim"] = {
     loaded = true,
-    path = "/Users/vlados_paperos/.local/share/nvim/site/pack/packer/start/nvcode-color-schemes.vim"
+    path = "/Users/auhoris/.local/share/nvim/site/pack/packer/start/nvcode-color-schemes.vim"
   },
   ["nvim-autopairs"] = {
     loaded = true,
-    path = "/Users/vlados_paperos/.local/share/nvim/site/pack/packer/start/nvim-autopairs"
+    path = "/Users/auhoris/.local/share/nvim/site/pack/packer/start/nvim-autopairs"
   },
   ["nvim-compe"] = {
     loaded = true,
-    path = "/Users/vlados_paperos/.local/share/nvim/site/pack/packer/start/nvim-compe"
+    path = "/Users/auhoris/.local/share/nvim/site/pack/packer/start/nvim-compe"
   },
   ["nvim-dap"] = {
     loaded = true,
-    path = "/Users/vlados_paperos/.local/share/nvim/site/pack/packer/start/nvim-dap"
+    path = "/Users/auhoris/.local/share/nvim/site/pack/packer/start/nvim-dap"
   },
   ["nvim-lspconfig"] = {
     loaded = true,
-    path = "/Users/vlados_paperos/.local/share/nvim/site/pack/packer/start/nvim-lspconfig"
+    path = "/Users/auhoris/.local/share/nvim/site/pack/packer/start/nvim-lspconfig"
   },
   ["nvim-lspinstall"] = {
     loaded = true,
-    path = "/Users/vlados_paperos/.local/share/nvim/site/pack/packer/start/nvim-lspinstall"
+    path = "/Users/auhoris/.local/share/nvim/site/pack/packer/start/nvim-lspinstall"
+  },
+  ["nvim-tree.lua"] = {
+    loaded = true,
+    path = "/Users/auhoris/.local/share/nvim/site/pack/packer/start/nvim-tree.lua"
   },
   ["nvim-treesitter"] = {
     loaded = true,
-    path = "/Users/vlados_paperos/.local/share/nvim/site/pack/packer/start/nvim-treesitter"
+    path = "/Users/auhoris/.local/share/nvim/site/pack/packer/start/nvim-treesitter"
   },
   ["nvim-web-devicons"] = {
     loaded = true,
-    path = "/Users/vlados_paperos/.local/share/nvim/site/pack/packer/start/nvim-web-devicons"
+    path = "/Users/auhoris/.local/share/nvim/site/pack/packer/start/nvim-web-devicons"
   },
   ["omni.vim"] = {
     loaded = true,
-    path = "/Users/vlados_paperos/.local/share/nvim/site/pack/packer/start/omni.vim"
+    path = "/Users/auhoris/.local/share/nvim/site/pack/packer/start/omni.vim"
   },
   ["packer.nvim"] = {
     loaded = false,
     needs_bufread = false,
-    path = "/Users/vlados_paperos/.local/share/nvim/site/pack/packer/opt/packer.nvim"
+    path = "/Users/auhoris/.local/share/nvim/site/pack/packer/opt/packer.nvim"
   },
   ["plenary.nvim"] = {
     loaded = true,
-    path = "/Users/vlados_paperos/.local/share/nvim/site/pack/packer/start/plenary.nvim"
+    path = "/Users/auhoris/.local/share/nvim/site/pack/packer/start/plenary.nvim"
   },
   ["popup.nvim"] = {
     loaded = true,
-    path = "/Users/vlados_paperos/.local/share/nvim/site/pack/packer/start/popup.nvim"
+    path = "/Users/auhoris/.local/share/nvim/site/pack/packer/start/popup.nvim"
   },
   ["telescope-media-files.nvim"] = {
     loaded = true,
-    path = "/Users/vlados_paperos/.local/share/nvim/site/pack/packer/start/telescope-media-files.nvim"
+    path = "/Users/auhoris/.local/share/nvim/site/pack/packer/start/telescope-media-files.nvim"
   },
   ["telescope.nvim"] = {
     loaded = true,
-    path = "/Users/vlados_paperos/.local/share/nvim/site/pack/packer/start/telescope.nvim"
+    path = "/Users/auhoris/.local/share/nvim/site/pack/packer/start/telescope.nvim"
   },
   ultisnips = {
     loaded = true,
-    path = "/Users/vlados_paperos/.local/share/nvim/site/pack/packer/start/ultisnips"
+    path = "/Users/auhoris/.local/share/nvim/site/pack/packer/start/ultisnips"
   },
   ["vim-flake8"] = {
     loaded = true,
-    path = "/Users/vlados_paperos/.local/share/nvim/site/pack/packer/start/vim-flake8"
+    path = "/Users/auhoris/.local/share/nvim/site/pack/packer/start/vim-flake8"
   },
   ["vim-floaterm"] = {
     loaded = true,
-    path = "/Users/vlados_paperos/.local/share/nvim/site/pack/packer/start/vim-floaterm"
+    path = "/Users/auhoris/.local/share/nvim/site/pack/packer/start/vim-floaterm"
   },
   ["vim-snippets"] = {
     loaded = true,
-    path = "/Users/vlados_paperos/.local/share/nvim/site/pack/packer/start/vim-snippets"
+    path = "/Users/auhoris/.local/share/nvim/site/pack/packer/start/vim-snippets"
   },
   ["vim-startify"] = {
     loaded = true,
-    path = "/Users/vlados_paperos/.local/share/nvim/site/pack/packer/start/vim-startify"
+    path = "/Users/auhoris/.local/share/nvim/site/pack/packer/start/vim-startify"
   },
   ["vim-vsnip"] = {
     loaded = true,
-    path = "/Users/vlados_paperos/.local/share/nvim/site/pack/packer/start/vim-vsnip"
+    path = "/Users/auhoris/.local/share/nvim/site/pack/packer/start/vim-vsnip"
   },
   ["vim-vsnip-integ"] = {
     loaded = true,
-    path = "/Users/vlados_paperos/.local/share/nvim/site/pack/packer/start/vim-vsnip-integ"
+    path = "/Users/auhoris/.local/share/nvim/site/pack/packer/start/vim-vsnip-integ"
   },
   ["vim-yapf"] = {
     loaded = true,
-    path = "/Users/vlados_paperos/.local/share/nvim/site/pack/packer/start/vim-yapf"
+    path = "/Users/auhoris/.local/share/nvim/site/pack/packer/start/vim-yapf"
   }
 }
 

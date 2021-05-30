@@ -44,6 +44,7 @@ return require('packer').startup(function()
   -- use 'one-harsh/vscode-cpp-snippets'
   -- use 'norcalli/snippets.nvim'
   use 'SirVer/ultisnips'
+  -- use 'dense-analysis/ale'
 
   -- Treesitter
   use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
@@ -62,11 +63,12 @@ return require('packer').startup(function()
   use 'nvim-telescope/telescope-media-files.nvim'
 
   -- UI
-  use 'glepnir/galaxyline.nvim'
+  -- use 'glepnir/galaxyline.nvim'
   use 'romgrk/barbar.nvim'
   use 'kyazdani42/nvim-web-devicons'
   use 'glepnir/dashboard-nvim'
---  use 'kyazdani42/nvim-tree.lua'
+  use 'kyazdani42/nvim-tree.lua'
+  use 'hoob3rt/lualine.nvim'
 
 -- General
   use 'b3nj5m1n/kommentary'

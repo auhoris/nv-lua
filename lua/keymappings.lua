@@ -4,8 +4,6 @@ vim.g.mapleader = ' '
 --no hl
 vim.api.nvim_set_keymap('n', '<Leader>h', ':set hlsearch!<CR>', {noremap = true, silent = true})
 
---explorer
-vim.api.nvim_set_keymap('n', '<Leader>e', ':Vex<CR>', {noremap = true, silent = true})
 
 --quit and save mappings
 vim.api.nvim_set_keymap('n', '<C-s>', ':w<CR>', {noremap = true, silent = true})
