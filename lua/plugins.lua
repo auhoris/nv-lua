@@ -44,6 +44,7 @@ return require('packer').startup(function()
   -- use 'one-harsh/vscode-cpp-snippets'
   -- use 'norcalli/snippets.nvim'
   use 'SirVer/ultisnips'
+  -- use 'dense-analysis/ale'
 
   -- Treesitter
   use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }

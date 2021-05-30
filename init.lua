@@ -23,6 +23,7 @@ require('nv-dashboard')
 
 -- vim scripts
 vim.cmd('source ~/.config/nvim/vimscript/42header.vim')
+-- vim.cmd('source ~/.config/nvim/vimscript/python.vim')
 vim.cmd('packadd! gruvbox-material')
 
 -- Debug
