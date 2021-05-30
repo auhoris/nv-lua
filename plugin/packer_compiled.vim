@@ -91,10 +91,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/auhoris/.local/share/nvim/site/pack/packer/start/far.vim"
   },
-  ["galaxyline.nvim"] = {
-    loaded = true,
-    path = "/Users/auhoris/.local/share/nvim/site/pack/packer/start/galaxyline.nvim"
-  },
   ["gitsigns.nvim"] = {
     loaded = true,
     path = "/Users/auhoris/.local/share/nvim/site/pack/packer/start/gitsigns.nvim"
@@ -119,6 +115,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/auhoris/.local/share/nvim/site/pack/packer/start/lspsaga.nvim"
   },
+  ["lualine.nvim"] = {
+    loaded = true,
+    path = "/Users/auhoris/.local/share/nvim/site/pack/packer/start/lualine.nvim"
+  },
   ["nvcode-color-schemes.vim"] = {
     loaded = true,
     path = "/Users/auhoris/.local/share/nvim/site/pack/packer/start/nvcode-color-schemes.vim"
@@ -142,6 +142,10 @@ _G.packer_plugins = {
   ["nvim-lspinstall"] = {
     loaded = true,
     path = "/Users/auhoris/.local/share/nvim/site/pack/packer/start/nvim-lspinstall"
+  },
+  ["nvim-tree.lua"] = {
+    loaded = true,
+    path = "/Users/auhoris/.local/share/nvim/site/pack/packer/start/nvim-tree.lua"
   },
   ["nvim-treesitter"] = {
     loaded = true,
