@@ -83,6 +83,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/auhoris/.local/share/nvim/site/pack/packer/start/barbar.nvim"
   },
+  ["colorbuddy.vim"] = {
+    loaded = true,
+    path = "/Users/auhoris/.local/share/nvim/site/pack/packer/start/colorbuddy.vim"
+  },
   ["dashboard-nvim"] = {
     loaded = true,
     path = "/Users/auhoris/.local/share/nvim/site/pack/packer/start/dashboard-nvim"
@@ -158,6 +162,10 @@ _G.packer_plugins = {
   ["omni.vim"] = {
     loaded = true,
     path = "/Users/auhoris/.local/share/nvim/site/pack/packer/start/omni.vim"
+  },
+  onebuddy = {
+    loaded = true,
+    path = "/Users/auhoris/.local/share/nvim/site/pack/packer/start/onebuddy"
   },
   ["packer.nvim"] = {
     loaded = false,

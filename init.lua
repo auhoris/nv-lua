@@ -21,7 +21,7 @@ require('nv-floaterm')
 require('nv-deoplete')
 require('nv-dashboard')
 require('nv-nvimtree')
-require('nv-lualine')
+-- require('nv-lualine')
 
 --
 -- vim scripts

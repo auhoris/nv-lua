@@ -55,6 +55,8 @@ return require('packer').startup(function()
   use 'yonlu/omni.vim'
   -- use 'fratajczak/one-monokai-vim'
   use 'sainnhe/gruvbox-material'
+  use 'tjdevries/colorbuddy.vim'
+  use 'Th3Whit3Wolf/onebuddy'
 
   -- Telescope
   use 'nvim-lua/popup.nvim'
