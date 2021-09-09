@@ -24,3 +24,19 @@ for (int i = $1; i < size; i++)
 	$2;
 }
 endsnippet
+
+snippet ortclass "orthodox canonical form"
+class ${1:ClassName}
+{
+private:
+	${2:your_field};
+public:
+	// Default
+	$1();
+	$1(const $1 &other);
+	~$1();
+
+	// Operators
+	$1&	operator=(const $1 &other);
+};
+endsnippet

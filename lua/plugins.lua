@@ -37,14 +37,17 @@ return require('packer').startup(function()
   -- use 'davidhalter/jedi-vim'
 
   -- Completion and snippets
+  --use 'hrsh7th/nvim-cmp'
   use 'hrsh7th/nvim-compe'
   use 'honza/vim-snippets'
   use 'hrsh7th/vim-vsnip'
   use 'hrsh7th/vim-vsnip-integ'
+  use 'Raimondi/delimitMate'
   -- use 'one-harsh/vscode-cpp-snippets'
   -- use 'norcalli/snippets.nvim'
   use 'SirVer/ultisnips'
   -- use 'dense-analysis/ale'
+  use 'ray-x/lsp_signature.nvim'
 
   -- Treesitter
   use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
@@ -80,6 +83,7 @@ return require('packer').startup(function()
   use 'brooth/far.vim'
   use 'voldikss/vim-floaterm'
   use '42Paris/42header'
+  use 'akinsho/toggleterm.nvim'
   -- use 'pbondoer/vim-42header'
 
 -- Something for git

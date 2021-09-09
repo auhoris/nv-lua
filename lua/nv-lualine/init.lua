@@ -1,7 +1,12 @@
+--[[ require('lualine').setup{
+    options = {lower = true},
+    sections = {lualine_a = {{'mode', lower = false}}, lualine_b = {'branch'}}
+} ]]
+
 -- Eviline config for lualine
 -- Author: shadmansaleh
 -- Credit: glepnir
-local lualine = require('lualine')
+local lualine = require 'lualine'
 
 -- Color table for highlights
 local colors = {
@@ -87,13 +92,13 @@ ins_left {
       n = colors.red,
       i = colors.green,
       v = colors.blue,
-      [''] = colors.blue,
+      [''] = colors.blue,
       V = colors.blue,
       c = colors.magenta,
       no = colors.red,
       s = colors.orange,
       S = colors.orange,
-      [''] = colors.orange,
+      [''] = colors.orange,
       ic = colors.yellow,
       R = colors.violet,
       Rv = colors.violet,
@@ -216,4 +221,4 @@ ins_right {
 }
 
 -- Now don't forget to initialize lualine
--- lualine.setup(config)
+lualine.setup(config)

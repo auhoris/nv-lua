@@ -12,4 +12,4 @@ vim.api.nvim_set_keymap('n', '<Leader>7', ':BufferGoto7<CR>', { noremap = true, 
 vim.api.nvim_set_keymap('n', '<Leader>8', ':BufferGoto8<CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<Leader>9', ':BufferGoto9<CR>', { noremap = true, silent = true })
 
-vim.api.nvim_set_keymap('n', '<Leader>q', ':BufferClose<CR>', { noremap = true})
+vim.api.nvim_set_keymap('n', '<C-e>', ':BufferClose<CR>', { noremap = true})

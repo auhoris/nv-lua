@@ -1,3 +1,4 @@
+-- imap <expr> <CR> pumvisible() ? "\<c-y>" : "<Plug>delimitMateCR"
 -- Main settings
 require('plugins')
 require('keymappings')
@@ -6,7 +7,6 @@ require('settings')
 --
 ---- plugins
 require('nv-compe')
-require('nv-galaxyline')
 require('nv-treesitter')
 require('nv-telescope')
 require('nv-gitsigns')
@@ -21,9 +21,9 @@ require('nv-floaterm')
 require('nv-deoplete')
 require('nv-dashboard')
 require('nv-nvimtree')
--- require('nv-lualine')
+require('nv-toggleterm')
+require('nv-lualine')
 
---
 -- vim scripts
 vim.cmd('source ~/.config/nvim/vimscript/42header.vim')
 -- vim.cmd('source ~/.config/nvim/vimscript/python.vim')
@@ -37,7 +37,6 @@ require('nv-dapconfig.mappings')
 --
 --lsp
 require('lsp')
--- require('nv-lspinstall')
-require('lsp.clangd-ls')
+-- require('lsp.clangd-ls')
 require('lsp.python-ls')
 --require('lsp.lua-ls')

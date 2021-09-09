@@ -14,21 +14,24 @@ vim.o.splitbelow = true
 -- Better colors
 vim.o.termguicolors=true
 --vim.o.t_Co="256"
---
+
 -- Good indenting for c code
 vim.bo.autoindent = true
 vim.bo.smartindent = true
+vim.cmd('set expandtab')
+-- vim.bo.expandtab = true
 vim.bo.softtabstop = 0
 vim.cmd('set ts=4')
 vim.cmd('set sw=4')
---
+
+
 ---- Good indenting for python code
-----[[ vim.bo.autoindent = true
---vim.bo.smartindent = true
---vim.cmd('set expandtab')
---vim.bo.softtabstop = 0
---vim.cmd('set ts=8')
---vim.cmd('set sw=4') ]]
+--[[ vim.bo.autoindent = true
+vim.bo.smartindent = true
+vim.cmd('set expandtab')
+vim.bo.softtabstop = 0
+vim.cmd('set ts=8')
+vim.cmd('set sw=4') ]]
 --
 --
 -- No swap files
