@@ -89,6 +89,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/vlados_paperos/.local/share/nvim/site/pack/packer/start/dashboard-nvim"
   },
+  delimitMate = {
+    loaded = true,
+    path = "/Users/vlados_paperos/.local/share/nvim/site/pack/packer/start/delimitMate"
+  },
   ["far.vim"] = {
     loaded = true,
     path = "/Users/vlados_paperos/.local/share/nvim/site/pack/packer/start/far.vim"
@@ -209,6 +213,10 @@ _G.packer_plugins = {
   ["telescope.nvim"] = {
     loaded = true,
     path = "/Users/vlados_paperos/.local/share/nvim/site/pack/packer/start/telescope.nvim"
+  },
+  ["toggleterm.nvim"] = {
+    loaded = true,
+    path = "/Users/vlados_paperos/.local/share/nvim/site/pack/packer/start/toggleterm.nvim"
   },
   ultisnips = {
     loaded = true,

@@ -1,6 +1,10 @@
 snippet cout "cout with endl" i
-std::cout << ${1: your message} << std::endl;
+std::cout << $1 << "\n";
 endsnippet
+
+# snippet cout "cout with endl" i
+# cout << ${1: your message} << endl;
+# endsnippet
 
 snippet class "class description"
 class ${1:ClassName}
@@ -17,4 +21,27 @@ endsnippet
 
 snippet for "for loop"
 for (int i = 0; i < ${1: size}; i++)
+endsnippet
+
+snippet for "for loop snippet"
+for (int i = $1; i < size; i++)
+{
+	$2;
+}
+endsnippet
+
+snippet ortclass "orthodox canonical form"
+class ${1:ClassName}
+{
+private:
+	${2:your_field};
+public:
+	// Default
+	$1();
+	$1(const $1 &other);
+	~$1();
+
+	// Operators
+	$1&	operator=(const $1 &other);
+};
 endsnippet

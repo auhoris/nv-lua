@@ -1,34 +1,12 @@
-require'lualine'.setup {
-  options = {
-    icons_enabled = true,
-    theme = 'gruvbox',
-    component_separators = {'', ''},
-    section_separators = {'', ''},
-    disabled_filetypes = {}
-  },
-  sections = {
-    lualine_a = {'mode'},
-    lualine_b = {'branch'},
-    lualine_c = {'filename'},
-    lualine_x = {'encoding', 'fileformat', 'filetype'},
-    lualine_y = {'progress'},
-    lualine_z = {'location'}
-  },
-  inactive_sections = {
-    lualine_a = {},
-    lualine_b = {},
-    lualine_c = {'filename'},
-    lualine_x = {'location'},
-    lualine_y = {},
-    lualine_z = {}
-  },
-  tabline = {},
-  extensions = {}
-}
+--[[ require('lualine').setup{
+    options = {lower = true},
+    sections = {lualine_a = {{'mode', lower = false}}, lualine_b = {'branch'}}
+} ]]
+
 -- Eviline config for lualine
 -- Author: shadmansaleh
 -- Credit: glepnir
---[[ local lualine = require('lualine')
+local lualine = require 'lualine'
 
 -- Color table for highlights
 local colors = {
@@ -114,13 +92,13 @@ ins_left {
       n = colors.red,
       i = colors.green,
       v = colors.blue,
-      [''] = colors.blue,
+      [''] = colors.blue,
       V = colors.blue,
       c = colors.magenta,
       no = colors.red,
       s = colors.orange,
       S = colors.orange,
-      [''] = colors.orange,
+      [''] = colors.orange,
       ic = colors.yellow,
       R = colors.violet,
       Rv = colors.violet,
@@ -243,4 +221,4 @@ ins_right {
 }
 
 -- Now don't forget to initialize lualine
--- lualine.setup(config) ]]
+lualine.setup(config)

@@ -1,3 +1,3 @@
-vim.cmd('colorscheme lunar')
+vim.cmd('colorscheme nvcode')
 vim.cmd('let g:nvcode_termcolors=256')
 vim.cmd('let ayucolor="mirage"')
