@@ -27,7 +27,7 @@ vim.cmd('nnoremap <silent> <Leader>D <cmd>lua vim.lsp.buf.type_definition()<CR>'
 vim.cmd('nnoremap <silent> ca :Lspsaga code_action<CR>')
 vim.cmd('nnoremap <silent> K :Lspsaga hover_doc<CR>')
 vim.cmd('nnoremap <silent> <Leader>rn :Lspsaga rename<CR>')
--- vim.cmd('nnoremap <silent> <C-k> <cmd>lua vim.lsp.buf.signature_help()<CR>')
+vim.cmd('nnoremap <silent> <C-k> <cmd>lua vim.lsp.buf.signature_help()<CR>')
 
 -- Go between error
 vim.cmd('nnoremap <silent> <C-p> :Lspsaga diagnostic_jump_prev<CR>')

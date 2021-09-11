@@ -45,6 +45,7 @@ return require('packer').startup(function()
   -- use 'norcalli/snippets.nvim'
   use 'SirVer/ultisnips'
   -- use 'dense-analysis/ale'
+  use 'ray-x/lsp_signature.nvim'
 
   -- Treesitter
   use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
@@ -55,6 +56,12 @@ return require('packer').startup(function()
   use 'yonlu/omni.vim'
   -- use 'fratajczak/one-monokai-vim'
   use 'sainnhe/gruvbox-material'
+  use 'mhartington/oceanic-next'
+  use 'sainnhe/sonokai'
+  use 'tjdevries/colorbuddy.vim'
+  use 'Th3Whit3Wolf/onebuddy'
+  use 'RRethy/nvim-base16'
+  use 'Th3Whit3Wolf/one-nvim'
 
   -- Telescope
   use 'nvim-lua/popup.nvim'
@@ -63,7 +70,7 @@ return require('packer').startup(function()
   use 'nvim-telescope/telescope-media-files.nvim'
 
   -- UI
-  -- use 'glepnir/galaxyline.nvim'
+  use 'glepnir/galaxyline.nvim'
   use 'romgrk/barbar.nvim'
   use 'kyazdani42/nvim-web-devicons'
   use 'glepnir/dashboard-nvim'

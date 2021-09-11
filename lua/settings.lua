@@ -13,11 +13,13 @@ vim.o.splitbelow = true
 --
 -- Better colors
 vim.o.termguicolors=true
+vim.cmd('set t_Co=256')
 --vim.o.t_Co="256"
 --
 -- Good indenting for c code
 vim.bo.autoindent = true
 vim.bo.smartindent = true
+vim.cmd('set expandtab')
 vim.bo.softtabstop = 0
 vim.cmd('set ts=4')
 vim.cmd('set sw=4')

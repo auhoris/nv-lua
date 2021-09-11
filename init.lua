@@ -21,7 +21,7 @@ require('nv-floaterm')
 require('nv-deoplete')
 require('nv-dashboard')
 require('nv-nvimtree')
-require('nv-lualine')
+-- require('nv-lualine')
 
 --
 -- vim scripts
@@ -31,8 +31,8 @@ vim.cmd('packadd! gruvbox-material')
 
 -- Debug
 require('nv-dapconfig')
-require('nv-dapconfig.my_debug')
-require('nv-dapconfig.mappings')
+--[[ require('nv-dapconfig.my_debug')
+require('nv-dapconfig.mappings') ]]
 -- require('nv-dapconfig.lldbconfig')
 --
 --lsp
