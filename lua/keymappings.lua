@@ -30,8 +30,8 @@ vim.api.nvim_set_keymap('i', 'kj', '<ESC>', {noremap = true, silent = true})
 -- Moving lines in every mode
 vim.api.nvim_set_keymap('x', 'K', ':m \'<-2<CR>gv=gv', {noremap = true, silent = true})
 vim.api.nvim_set_keymap('x', 'J', ':m \'>+1<CR>gv=gv', {noremap = true, silent = true})
-vim.api.nvim_set_keymap('i', '<C-j>', '<ESC>:m .+1<CR>==', {noremap = true, silent = true})
-vim.api.nvim_set_keymap('i', '<C-k>', '<ESC>:m .-2<CR>==', {noremap = true, silent = true})
+--[[ vim.api.nvim_set_keymap('i', '<C-j>', '<ESC>:m .+1<CR>==', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('i', '<C-k>', '<ESC>:m .-2<CR>==', {noremap = true, silent = true}) ]]
 vim.api.nvim_set_keymap('n', '<Leader>j', ':m .+1<CR>', {noremap = true, silent = true})
 vim.api.nvim_set_keymap('n', '<Leader>k', ':m .-2<CR>', {noremap = true, silent = true})
 

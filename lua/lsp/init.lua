@@ -1,52 +1,29 @@
-vim.fn.sign_define("LspDiagnosticsSignError", {
-    texthl = "LspDiagnosticsSignError",
-    text = "",
-    numhl = "LspDiagnosticsSignError"
+vim.lsp.handlers['textDocument/publishDiagnostics'] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
+  virtual_text = true,
+  signs = true,
+  underline = true,
+  update_in_insert = false,
 })
-vim.fn.sign_define("LspDiagnosticsSignWarning", {
-    texthl = "LspDiagnosticsSignWarning",
-    text = "",
-    numhl = "LspDiagnosticsSignWarning"
-})
-vim.fn.sign_define("LspDiagnosticsSignInformation", {
-    texthl = "LspDiagnosticsSignInformation",
-    text = "",
-    numhl = "LspDiagnosticsSignInformation"
-})
-vim.fn.sign_define("LspDiagnosticsSignHint", {
-    texthl = "LspDiagnosticsSignHint",
-    text = "",
-    numhl = "LspDiagnosticsSignHint"
-})
+local signs = { Error = " ", Warning = " ", Hint = " ", Information = " " }
 
--- local opts = {nnoremap = true, silent = true}
+for type, icon in pairs(signs) do
+  local hl = "LspDiagnosticsSign" .. type
+  vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
+end
 
---[[ vim.cmd('nnoremap <silent> gd <cmd>lua vim.lsp.buf.definition()<CR>')
-nvim_buf_set_keymap()
-vim.cmd('nnoremap <silent> gD <cmd>lua vim.lsp.buf.declaration()<CR>')
-vim.cmd('nnoremap <silent> gr <cmd>lua vim.lsp.buf.references()<CR>')
-vim.cmd('nnoremap <silent> gi <cmd>lua vim.lsp.buf.implementation()<CR>')
-vim.cmd('nnoremap <silent> <Leader>D <cmd>lua vim.lsp.buf.type_definition()<CR>')
-vim.cmd('nnoremap <silent> ca :Lspsaga code_action<CR>')
-vim.cmd('nnoremap <silent> K :Lspsaga hover_doc<CR>')
-<<<<<<< HEAD
-vim.cmd('nnoremap <silent> <Leader>rn :Lspsaga rename<CR>')
-vim.cmd('nnoremap <silent> <C-k> <cmd>lua vim.lsp.buf.signature_help()<CR>')
-=======
-vim.cmd('nnoremap <silent> <Leader>rn :Lspsaga rename<CR>') ]]
--- vim.cmd('nnoremap <silent> <C-k> <cmd>lua vim.lsp.buf.signature_help()<CR>')
+vim.cmd [[autocmd ColorScheme * highlight NormalFloat guibg=#1f2335]]
+vim.cmd [[autocmd ColorScheme * highlight FloatBorder guifg=white guibg=#1f2335]]
 
--- Go between error
---[[ vim.cmd('nnoremap <silent> <C-p> :Lspsaga diagnostic_jump_prev<CR>')
-vim.cmd('nnoremap <silent> <C-n> :Lspsaga diagnostic_jump_next<CR>') ]]
-
--- Open terminal
---[[ vim.cmd('nnoremap <silent> <Leader>t :Lspsaga open_floaterm<CR>')
-vim.cmd('tnoremap <silent> <Leader>t <C-\\><C-n>:Lspsaga close_floaterm<CR>') ]]
--- scroll down hover doc or scroll in definition preview
---vim.cmd('nnoremap <silent> <C-f> <cmd>lua require(\'lspsaga.action\').smart_scroll_with_saa(1)<CR>')
--- scroll up hover doc
---vim.cmd('nnoremap <silent> <C-b> <cmd>lua require(\'lspsaga.action\').smart_scroll_with_saga(-1)<CR>')g
+local border = {
+      {"🭽", "FloatBorder"},
+      {"▔", "FloatBorder"},
+      {"🭾", "FloatBorder"},
+      {"▕", "FloatBorder"},
+      {"🭿", "FloatBorder"},
+      {"▁", "FloatBorder"},
+      {"🭼", "FloatBorder"},
+      {"▏", "FloatBorder"},
+}
 
 local nvim_lsp = require('lspconfig')
 
@@ -55,6 +32,9 @@ local nvim_lsp = require('lspconfig')
 local on_attach = function(client, bufnr)
   local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
   local function buf_set_option(...) vim.api.nvim_buf_set_option(bufnr, ...) end
+
+--  vim.lsp.handlers["textDocument/hover"] =  vim.lsp.with(vim.lsp.handlers.hover, {border = border})
+--  vim.lsp.handlers["textDocument/signatureHelp"] =  vim.lsp.with(vim.lsp.handlers.signature_help, {border = border})
 
   -- Enable completion triggered by <c-x><c-o>
   buf_set_option('omnifunc', 'v:lua.vim.lsp.omnifunc')
@@ -68,6 +48,7 @@ local on_attach = function(client, bufnr)
   buf_set_keymap('n', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>', opts)
   buf_set_keymap('n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<CR>', opts)
   buf_set_keymap('n', '<C-k>', '<cmd>lua vim.lsp.buf.signature_help()<CR>', opts)
+  buf_set_keymap('i', '<C-k>', '<cmd>lua vim.lsp.buf.signature_help()<CR>', opts)
   buf_set_keymap('n', '<space>wa', '<cmd>lua vim.lsp.buf.add_workspace_folder()<CR>', opts)
   buf_set_keymap('n', '<space>wr', '<cmd>lua vim.lsp.buf.remove_workspace_folder()<CR>', opts)
   buf_set_keymap('n', '<space>wl', '<cmd>lua print(vim.inspect(vim.lsp.buf.list_workspace_folders()))<CR>', opts)
@@ -75,21 +56,37 @@ local on_attach = function(client, bufnr)
   buf_set_keymap('n', '<space>rn', '<cmd>lua vim.lsp.buf.rename()<CR>', opts)
   buf_set_keymap('n', '<space>ca', '<cmd>lua vim.lsp.buf.code_action()<CR>', opts)
   buf_set_keymap('n', 'gr', '<cmd>lua vim.lsp.buf.references()<CR>', opts)
-  buf_set_keymap('n', '<space>e', '<cmd>lua vim.lsp.diagnostic.show_line_diagnostics()<CR>', opts)
+  -- buf_set_keymap('n', '<space>e', '<cmd>lua vim.lsp.diagnostic.show_line_diagnostics()<CR>', opts)
   buf_set_keymap('n', '<C-n>', '<cmd>lua vim.lsp.diagnostic.goto_prev()<CR>', opts)
   buf_set_keymap('n', '<C-p>', '<cmd>lua vim.lsp.diagnostic.goto_next()<CR>', opts)
   buf_set_keymap('n', '<space>q', '<cmd>lua vim.lsp.diagnostic.set_loclist()<CR>', opts)
   buf_set_keymap('n', '<space>f', '<cmd>lua vim.lsp.buf.formatting()<CR>', opts)
 
 end
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities.textDocument.completion.completionItem.documentationFormat = { 'markdown', 'plaintext' }
+--capabilities.textDocument.completion.completionItem.snippetSupport = true
+capabilities.textDocument.completion.completionItem.preselectSupport = true
+capabilities.textDocument.completion.completionItem.insertReplaceSupport = true
+capabilities.textDocument.completion.completionItem.labelDetailsSupport = true
+capabilities.textDocument.completion.completionItem.deprecatedSupport = true
+capabilities.textDocument.completion.completionItem.commitCharactersSupport = true
+capabilities.textDocument.completion.completionItem.tagSupport = { valueSet = { 1 } }
+capabilities.textDocument.completion.completionItem.resolveSupport = {
+  properties = {
+    'documentation',
+    'detail',
+    'additionalTextEdits',
+  },
+}
 
 -- Use a loop to conveniently call 'setup' on multiple servers and
 -- map buffer local keybindings when the language server attaches
-local servers = { 'pyright', 'clangd', 'tsserver' }
+local servers = { 'pyright', 'clangd' }
 for _, lsp in ipairs(servers) do
   nvim_lsp[lsp].setup {
     on_attach = on_attach,
-    -- capabilities = capabilities,
+    capabilities = capabilities,
     flags = {
       debounce_text_changes = 150,
     }

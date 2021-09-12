@@ -4,9 +4,10 @@ require('plugins')
 require('keymappings')
 require('colorscheme')
 require('settings')
---
+
 ---- plugins
-require('nv-compe')
+--require('nv-compe')
+require('nv-cmp')
 require('nv-treesitter')
 require('nv-telescope')
 require('nv-gitsigns')
@@ -14,7 +15,7 @@ require('nv-barbar')
 require('nv-autopairs')
 require('nv-kommentary')
 require('nv-hop')
-require('nv-lspkind')
+-- require('nv-lspkind')
 require('nv-startify')
 require('nv-ultisnips')
 require('nv-floaterm')
@@ -34,9 +35,10 @@ require('nv-dapconfig')
 --[[ require('nv-dapconfig.my_debug')
 require('nv-dapconfig.mappings') ]]
 -- require('nv-dapconfig.lldbconfig')
---
+
 --lsp
 require('lsp')
--- require('lsp.clangd-ls')
 require('lsp.python-ls')
+
 --require('lsp.lua-ls')
+-- require('lsp.clangd-ls')

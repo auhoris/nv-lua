@@ -81,6 +81,18 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/vlados_paperos/.local/share/nvim/site/pack/packer/start/barbar.nvim"
   },
+  ["cmp-buffer"] = {
+    loaded = true,
+    path = "/Users/vlados_paperos/.local/share/nvim/site/pack/packer/start/cmp-buffer"
+  },
+  ["cmp-nvim-lsp"] = {
+    loaded = true,
+    path = "/Users/vlados_paperos/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp"
+  },
+  cmp_luasnip = {
+    loaded = true,
+    path = "/Users/vlados_paperos/.local/share/nvim/site/pack/packer/start/cmp_luasnip"
+  },
   ["colorbuddy.vim"] = {
     loaded = true,
     path = "/Users/vlados_paperos/.local/share/nvim/site/pack/packer/start/colorbuddy.vim"
@@ -96,10 +108,6 @@ _G.packer_plugins = {
   ["far.vim"] = {
     loaded = true,
     path = "/Users/vlados_paperos/.local/share/nvim/site/pack/packer/start/far.vim"
-  },
-  ["galaxyline.nvim"] = {
-    loaded = true,
-    path = "/Users/vlados_paperos/.local/share/nvim/site/pack/packer/start/galaxyline.nvim"
   },
   ["gitsigns.nvim"] = {
     loaded = true,
@@ -121,10 +129,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/vlados_paperos/.local/share/nvim/site/pack/packer/start/lsp_signature.nvim"
   },
-  ["lspkind-nvim"] = {
-    loaded = true,
-    path = "/Users/vlados_paperos/.local/share/nvim/site/pack/packer/start/lspkind-nvim"
-  },
   ["lspsaga.nvim"] = {
     loaded = true,
     path = "/Users/vlados_paperos/.local/share/nvim/site/pack/packer/start/lspsaga.nvim"
@@ -144,6 +148,10 @@ _G.packer_plugins = {
   ["nvim-base16"] = {
     loaded = true,
     path = "/Users/vlados_paperos/.local/share/nvim/site/pack/packer/start/nvim-base16"
+  },
+  ["nvim-cmp"] = {
+    loaded = true,
+    path = "/Users/vlados_paperos/.local/share/nvim/site/pack/packer/start/nvim-cmp"
   },
   ["nvim-compe"] = {
     loaded = true,

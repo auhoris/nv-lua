@@ -21,10 +21,9 @@ return require('packer').startup(function()
 
   -- LSP
   use 'neovim/nvim-lspconfig'
-  -- use 'anott03/nvim-lspinstall'
   use 'kabouzeid/nvim-lspinstall'
   use 'glepnir/lspsaga.nvim'
-  use 'onsails/lspkind-nvim'
+  -- use 'onsails/lspkind-nvim'
 
   -- Linters and formatters
   use 'mindriot101/vim-yapf'
@@ -37,16 +36,19 @@ return require('packer').startup(function()
   -- use 'davidhalter/jedi-vim'
 
   -- Completion and snippets
-  --use 'hrsh7th/nvim-cmp'
+  use {'hrsh7th/nvim-cmp', 
+      requires = {
+        "hrsh7th/vim-vsnip",
+        "hrsh7th/cmp-buffer",
+        "hrsh7th/cmp-nvim-lsp",
+        "saadparwaiz1/cmp_luasnip",
+      }}
   use 'hrsh7th/nvim-compe'
   use 'honza/vim-snippets'
   use 'hrsh7th/vim-vsnip'
   use 'hrsh7th/vim-vsnip-integ'
   use 'Raimondi/delimitMate'
-  -- use 'one-harsh/vscode-cpp-snippets'
-  -- use 'norcalli/snippets.nvim'
   use 'SirVer/ultisnips'
-  -- use 'dense-analysis/ale'
   use 'ray-x/lsp_signature.nvim'
 
   -- Treesitter
@@ -56,7 +58,6 @@ return require('packer').startup(function()
   use 'christianchiarulli/nvcode-color-schemes.vim'
   use 'ayu-theme/ayu-vim'
   use 'yonlu/omni.vim'
-  -- use 'fratajczak/one-monokai-vim'
   use 'sainnhe/gruvbox-material'
   use 'mhartington/oceanic-next'
   use 'sainnhe/sonokai'
@@ -72,7 +73,7 @@ return require('packer').startup(function()
   use 'nvim-telescope/telescope-media-files.nvim'
 
   -- UI
-  use 'glepnir/galaxyline.nvim'
+  -- use 'glepnir/galaxyline.nvim'
   use 'romgrk/barbar.nvim'
   use 'kyazdani42/nvim-web-devicons'
   use 'glepnir/dashboard-nvim'
