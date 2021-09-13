@@ -18,6 +18,7 @@ return require('packer').startup(function()
 
   -- Debug
   use 'mfussenegger/nvim-dap'
+  use 'puremourning/vimspector'
 
   -- LSP
   use 'neovim/nvim-lspconfig'
@@ -42,29 +43,26 @@ return require('packer').startup(function()
         "hrsh7th/cmp-buffer",
         "hrsh7th/cmp-nvim-lsp",
         "saadparwaiz1/cmp_luasnip",
+        "L3MON4D3/LuaSnip",
+        "quangnguyen30192/cmp-nvim-ultisnips",
       }}
-  use 'hrsh7th/nvim-compe'
+  use {'tzachar/cmp-tabnine', run='./install.sh', requires = 'hrsh7th/nvim-cmp'}
   use 'honza/vim-snippets'
   use 'hrsh7th/vim-vsnip'
   use 'hrsh7th/vim-vsnip-integ'
-  use 'Raimondi/delimitMate'
   use 'SirVer/ultisnips'
-  use 'ray-x/lsp_signature.nvim'
 
   -- Treesitter
   use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
 
   -- Colorschemes
   use 'christianchiarulli/nvcode-color-schemes.vim'
-  use 'ayu-theme/ayu-vim'
-  use 'yonlu/omni.vim'
   use 'sainnhe/gruvbox-material'
   use 'mhartington/oceanic-next'
   use 'sainnhe/sonokai'
-  use 'tjdevries/colorbuddy.vim'
-  use 'Th3Whit3Wolf/onebuddy'
   use 'RRethy/nvim-base16'
   use 'Th3Whit3Wolf/one-nvim'
+  use 'tanvirtin/monokai.nvim'
 
   -- Telescope
   use 'nvim-lua/popup.nvim'

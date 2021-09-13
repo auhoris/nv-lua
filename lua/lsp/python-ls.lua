@@ -2,7 +2,7 @@
 capabilities.textDocument.completion.completionItem.snippetSupport = true ]]
 
 
-require'lspconfig'.pyright.setup{on_attach=require'compe'.on_attach}
+-- require'lspconfig'.pyright.setup{on_attach=require'compe'.on_attach}
 
 --[[ local configs = require 'lspconfig/configs'
 local util = require 'lspconfig/util'

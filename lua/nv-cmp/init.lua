@@ -37,9 +37,11 @@ cmp.setup {
   },
   sources = {
     { name = 'nvim_lua'},
-    { name = 'luasnip'},
-    { name = 'buffer'},
     { name = 'nvim_lsp' },
+    { name = 'luasnip'},
+    { name = 'cmp_tabnine'},
+    { name = 'buffer'},
+    { name = 'path' },
     { name = 'vsnip'},
     { name = 'ultisnips'},
     { name = 'treesitter'},

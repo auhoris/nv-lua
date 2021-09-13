@@ -2,8 +2,6 @@
 vim.wo.number = true
 vim.wo.relativenumber = true
 
-
-
 vim.wo.cursorline = true
 vim.o.clipboard="unnamedplus"	-- Copy and paste everywhere
 --
@@ -47,7 +45,7 @@ vim.cmd("set listchars=tab:›\\ ,precedes:‹,nbsp:·,trail:·")
 --vim.cmd('set listchars=tab:\›\\ ,precedes:\‹,nbsp:\·,trail:\·') ]]
 
 vim.o.updatetime=300                      --Faster completion
-vim.o.timeoutlen=100                      --By default timeoutlen is 1000 ms
+vim.o.timeoutlen=300                      --By default timeoutlen is 1000 ms
 
 -- Enable mouse
 vim.o.mouse="a"
