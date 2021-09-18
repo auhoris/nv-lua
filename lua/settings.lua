@@ -45,7 +45,7 @@ vim.cmd("set listchars=tab:›\\ ,precedes:‹,nbsp:·,trail:·")
 --vim.cmd('set listchars=tab:\›\\ ,precedes:\‹,nbsp:\·,trail:\·') ]]
 
 vim.o.updatetime=300                      --Faster completion
-vim.o.timeoutlen=300                      --By default timeoutlen is 1000 ms
+vim.o.timeoutlen=500                      --By default timeoutlen is 1000 ms
 
 -- Enable mouse
 vim.o.mouse="a"

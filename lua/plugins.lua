@@ -29,6 +29,8 @@ return require('packer').startup(function()
   -- Linters and formatters
   use 'mindriot101/vim-yapf'
   use 'nvie/vim-flake8'
+  use 'sbdchd/neoformat'    -- Clang formatter
+  use 'rhysd/vim-clang-format'
 
   -- Python
   --[[ use {'Shougo/deoplete.nvim', run = ':UpdateRemotePlugins' }
@@ -71,7 +73,6 @@ return require('packer').startup(function()
   use 'nvim-telescope/telescope-media-files.nvim'
 
   -- UI
-  -- use 'glepnir/galaxyline.nvim'
   use 'romgrk/barbar.nvim'
   use 'kyazdani42/nvim-web-devicons'
   use 'glepnir/dashboard-nvim'

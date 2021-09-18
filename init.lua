@@ -5,8 +5,7 @@ require('keymappings')
 require('colorscheme')
 require('settings')
 
----- plugins
---require('nv-compe')
+-- plugins
 require('nv-cmp')
 require('nv-treesitter')
 require('nv-telescope')
@@ -18,12 +17,12 @@ require('nv-hop')
 require('nv-lspkind')
 require('nv-startify')
 require('nv-ultisnips')
-require('nv-floaterm')
-require('nv-deoplete')
 require('nv-dashboard')
 require('nv-nvimtree')
 require('nv-toggleterm')
 require('nv-lualine')
+require('nv-neoformat')
+require('nv-vimformat')
 
 -- vim scripts
 vim.cmd('source ~/.config/nvim/vimscript/42header.vim')
@@ -31,7 +30,6 @@ vim.cmd('source ~/.config/nvim/vimscript/42header.vim')
 vim.cmd('packadd! gruvbox-material')
 
 -- Debug
-require('nv-dapconfig')
 --[[ require('nv-dapconfig.my_debug')
 require('nv-dapconfig.mappings') ]]
 -- require('nv-dapconfig.lldbconfig')
