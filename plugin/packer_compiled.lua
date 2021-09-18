@@ -77,10 +77,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/vlados_paperos/.local/share/nvim/site/pack/packer/start/LuaSnip"
   },
-  ["ayu-vim"] = {
-    loaded = true,
-    path = "/Users/vlados_paperos/.local/share/nvim/site/pack/packer/start/ayu-vim"
-  },
   ["barbar.nvim"] = {
     loaded = true,
     path = "/Users/vlados_paperos/.local/share/nvim/site/pack/packer/start/barbar.nvim"
@@ -104,10 +100,6 @@ _G.packer_plugins = {
   cmp_luasnip = {
     loaded = true,
     path = "/Users/vlados_paperos/.local/share/nvim/site/pack/packer/start/cmp_luasnip"
-  },
-  ["colorbuddy.vim"] = {
-    loaded = true,
-    path = "/Users/vlados_paperos/.local/share/nvim/site/pack/packer/start/colorbuddy.vim"
   },
   ["dashboard-nvim"] = {
     loaded = true,
@@ -144,6 +136,10 @@ _G.packer_plugins = {
   ["monokai.nvim"] = {
     loaded = true,
     path = "/Users/vlados_paperos/.local/share/nvim/site/pack/packer/start/monokai.nvim"
+  },
+  neoformat = {
+    loaded = true,
+    path = "/Users/vlados_paperos/.local/share/nvim/site/pack/packer/start/neoformat"
   },
   ["nvcode-color-schemes.vim"] = {
     loaded = true,
@@ -189,17 +185,9 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/vlados_paperos/.local/share/nvim/site/pack/packer/start/oceanic-next"
   },
-  ["omni.vim"] = {
-    loaded = true,
-    path = "/Users/vlados_paperos/.local/share/nvim/site/pack/packer/start/omni.vim"
-  },
   ["one-nvim"] = {
     loaded = true,
     path = "/Users/vlados_paperos/.local/share/nvim/site/pack/packer/start/one-nvim"
-  },
-  onebuddy = {
-    loaded = true,
-    path = "/Users/vlados_paperos/.local/share/nvim/site/pack/packer/start/onebuddy"
   },
   ["packer.nvim"] = {
     loaded = false,
@@ -233,6 +221,10 @@ _G.packer_plugins = {
   ultisnips = {
     loaded = true,
     path = "/Users/vlados_paperos/.local/share/nvim/site/pack/packer/start/ultisnips"
+  },
+  ["vim-clang-format"] = {
+    loaded = true,
+    path = "/Users/vlados_paperos/.local/share/nvim/site/pack/packer/start/vim-clang-format"
   },
   ["vim-flake8"] = {
     loaded = true,
