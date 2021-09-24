@@ -22,9 +22,9 @@ vim.api.nvim_set_keymap('v', '>', '>gv', {noremap = true, silent = true})
 
 -- Better ESC
 vim.api.nvim_set_keymap('i', '<C-c>', '<ESC>', {noremap = true, silent = true})
-vim.api.nvim_set_keymap('i', 'jj', '<ESC>', {noremap = true, silent = true})
+--[[ vim.api.nvim_set_keymap('i', 'jj', '<ESC>', {noremap = true, silent = true})
 vim.api.nvim_set_keymap('i', 'jk', '<ESC>', {noremap = true, silent = true})
-vim.api.nvim_set_keymap('i', 'kj', '<ESC>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('i', 'kj', '<ESC>', {noremap = true, silent = true}) ]]
 
 
 -- Moving lines in every mode

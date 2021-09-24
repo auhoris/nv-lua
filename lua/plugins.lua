@@ -53,6 +53,10 @@ return require('packer').startup(function()
   use 'hrsh7th/vim-vsnip'
   use 'hrsh7th/vim-vsnip-integ'
   use 'SirVer/ultisnips'
+  -- Coq completion
+  use {'ms-jpq/coq_nvim', branch = 'coq'}
+  use {'ms-jpq/coq.artifacts', branch = 'artifacts'}
+  -- use {'ms-jpq/coq.thirdparty', branch = '3p'}
 
   -- Treesitter
   use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }

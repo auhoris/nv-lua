@@ -36,14 +36,14 @@ cmp.setup {
     end,
   },
   sources = {
---    { name = 'nvim_lua'},
     { name = 'nvim_lsp' },
     { name = 'luasnip'},
---    { name = 'cmp_tabnine'},
     { name = 'buffer'},
     { name = 'path' },
---    { name = 'vsnip'},
     { name = 'ultisnips'},
     { name = 'treesitter'},
+--    { name = 'cmp_tabnine'},
+--    { name = 'vsnip'},
+--    { name = 'nvim_lua'},
   },
 }

@@ -101,6 +101,14 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/vlados_paperos/.local/share/nvim/site/pack/packer/start/cmp_luasnip"
   },
+  ["coq.artifacts"] = {
+    loaded = true,
+    path = "/Users/vlados_paperos/.local/share/nvim/site/pack/packer/start/coq.artifacts"
+  },
+  coq_nvim = {
+    loaded = true,
+    path = "/Users/vlados_paperos/.local/share/nvim/site/pack/packer/start/coq_nvim"
+  },
   ["dashboard-nvim"] = {
     loaded = true,
     path = "/Users/vlados_paperos/.local/share/nvim/site/pack/packer/start/dashboard-nvim"
