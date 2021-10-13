@@ -24,7 +24,7 @@ return require('packer').startup(function()
   use 'neovim/nvim-lspconfig'
   use 'kabouzeid/nvim-lspinstall'
   use 'glepnir/lspsaga.nvim'
-  -- use 'onsails/lspkind-nvim'
+  use 'onsails/lspkind-nvim'
 
   -- Linters and formatters
   use 'mindriot101/vim-yapf'
@@ -48,15 +48,11 @@ return require('packer').startup(function()
         "L3MON4D3/LuaSnip",
         "quangnguyen30192/cmp-nvim-ultisnips",
       }}
-  use {'tzachar/cmp-tabnine', run='./install.sh', requires = 'hrsh7th/nvim-cmp'}
   use 'honza/vim-snippets'
   use 'hrsh7th/vim-vsnip'
   use 'hrsh7th/vim-vsnip-integ'
+  use 'hrsh7th/cmp-vsnip'
   use 'SirVer/ultisnips'
-  -- Coq completion
-  use {'ms-jpq/coq_nvim', branch = 'coq'}
-  use {'ms-jpq/coq.artifacts', branch = 'artifacts'}
-  -- use {'ms-jpq/coq.thirdparty', branch = '3p'}
 
   -- Treesitter
   use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
