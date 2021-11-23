@@ -54,7 +54,28 @@ capabilities.textdocument.completion.completionitem.resolvesupport = {
 
 -- Use a loop to conveniently call 'setup' on multiple servers and
 -- map buffer local keybindings when the language server attaches
-local servers = { 'pyright', 'clangd'}
+local servers = {
+    'pyright',
+    'clangd',
+    -- 'gopls',
+    --[[ gopls = {
+        cmd = {'gopls','--remote=auto'},
+        capabilties = {
+            textDocuemnt = {
+                completion = {
+                    completionItem = {
+                        snippetSupport = true
+                    }
+                }
+            }
+        },
+        init_options = {
+            usePlaceholders = true,
+            completeUnimported = true
+        }
+    }, ]]
+}
+
 for _, lsp in ipairs(servers) do
   nvim_lsp[lsp].setup {
     on_attach = on_attach,
@@ -64,3 +85,27 @@ for _, lsp in ipairs(servers) do
     }
   }
 end
+
+nvim_lsp.gopls.setup{
+	on_attach = on_attach,
+	capabilities = capabilities,
+	cmd = {"gopls", "serve"},
+	settings = {
+		gopls = {
+			analyses = {
+				unusedparams = true,
+			},
+			staticcheck = true,
+			linksInHover = false,
+			codelens = {
+				generate = true,
+				gc_details = true,
+				regenerate_cgo = true,
+				tidy = true,
+				upgrade_depdendency = true,
+				vendor = true,
+			},
+			usePlaceholders = true,
+		},
+	},
+}

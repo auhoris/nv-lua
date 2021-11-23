@@ -32,3 +32,4 @@ vim.cmd('packadd! gruvbox-material')
 --lsp
 require('lsp')
 require('lsp.lua-ui')
+-- require('lsp.gols')
