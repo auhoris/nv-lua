@@ -38,10 +38,10 @@ cmp.setup {
                                         vim_item.kind)
           vim_item.menu = ({
               nvim_lsp = '[LSP]',
+			  buffer = '[Buf]',
+			  path = '[Pth]',
               luasnip = '[Snp]',
-              buffer = '[Buf]',
               nvim_lua = '[Lua]',
-              path = '[Pth]',
               calc = '[Clc]',
               emoji = '[Emj]'
           })[entry.source.name]

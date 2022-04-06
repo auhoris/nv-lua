@@ -23,10 +23,13 @@ return require('packer').startup(function()
 
 -- LSP
   use 'neovim/nvim-lspconfig'
-  use 'kabouzeid/nvim-lspinstall'
-  -- use 'glepnir/lspsaga.nvim'
-  use 'onsails/lspkind-nvim'
-  use { 'gfanto/fzf-lsp.nvim' }
+  --use 'kabouzeid/nvim-lspinstall'
+  use { 'tami5/lspsaga.nvim' }
+  use {'ray-x/navigator.lua', requires = {'ray-x/guihua.lua', run = 'cd lua/fzy && make'}}
+  --use 'onsails/lspkind-nvim'
+  use { 'ray-x/lsp_signature.nvim'}
+  use { 'rmagatti/goto-preview' }
+  use {'kevinhwang91/nvim-bqf'}
 
 -- Linters and formatters
   --[[ use 'mindriot101/vim-yapf'
@@ -43,7 +46,7 @@ return require('packer').startup(function()
 -- Completion and snippets
   use {'hrsh7th/nvim-cmp',
       requires = {
-        "hrsh7th/vim-vsnip",
+		"hrsh7th/cmp-nvim-lsp",
         "hrsh7th/cmp-buffer",
         "hrsh7th/cmp-nvim-lsp",
         "saadparwaiz1/cmp_luasnip",
@@ -58,6 +61,7 @@ return require('packer').startup(function()
 
 -- Treesitter
   use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
+  use { 'romgrk/nvim-treesitter-context' }
 
 -- Colorschemes
   use 'christianchiarulli/nvcode-color-schemes.vim'

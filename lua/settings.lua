@@ -91,3 +91,6 @@ require("transparent").setup({
   },
   exclude = {}, -- table: groups you don't want to clear
 })
+
+vim.cmd([[hi Search guibg=DarkBlue guifg=LightCyan]])
+vim.cmd([[set grepprg=rg\ --vimgrep\ --no-heading\ --smart-case]])

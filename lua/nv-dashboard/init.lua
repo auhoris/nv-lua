@@ -13,7 +13,7 @@ vim.g.dashboard_custom_section = {
     a = {description = {' Find File          '}, command = 'FzfLua files'},
     b = {description = {'  Recently Used Files'}, command = 'FzfLua  oldfiles'},
     c = {description = {'  Load Last Session  '}, command = 'SessionLoad'},
-    d = {description = {'  Find Word          '}, command = 'FzfLua live_grep'},
+    d = {description = {'  Find Word          '}, command = 'FzfLua grep'},
     e = {description = {'  Settings           '}, command = ':e ~/.config/nvim/nv-settings.lua'}
     -- e = {description = {'  Marks              '}, command = 'Telescope marks'}
 }

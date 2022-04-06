@@ -7,7 +7,7 @@ map('n', '<Leader>h', ':set hlsearch!<CR>', {noremap = true, silent = true})
 
 
 --quit and save mappings
-map('n', '<C-s>', ':w<CR>', {noremap = true, silent = true})
+--map('n', '<C-s>', ':w<CR>', {noremap = true, silent = true})
 map('n', '<C-q>', ':q!<CR>', {noremap = true, silent = true})
 
 -- Better window movement
@@ -22,7 +22,7 @@ map('v', '<', '<gv', {noremap = true, silent = true})
 map('v', '>', '>gv', {noremap = true, silent = true})
 
 -- Better ESC
-map('i', '<C-c>', '<ESC>', {noremap = true, silent = true})
+--map('i', '<C-c>', '<ESC>', {noremap = true, silent = true})
 --[[ map('i', 'jj', '<ESC>', {noremap = true, silent = true})
 map('i', 'jk', '<ESC>', {noremap = true, silent = true})
 map('i', 'kj', '<ESC>', {noremap = true, silent = true}) ]]
