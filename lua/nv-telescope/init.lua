@@ -1,12 +1,13 @@
-require('telescope').load_extension('dap')
 
-map = vim.api.nvim_set_keymap
-map('n', '<C-p>', ':Telescope find_files<CR>', {noremap = true, silent = true})
-map('n', '<C-g>', ':Telescope live_grep<CR>', {noremap = true, silent = true})
-map('n', '<C-b>', ':Telescope buffers<CR>', {noremap = true, silent = true})
-map('n', '<C-T>', ':Telescope search_history<CR>', {noremap = true, silent = true})
-map('n', '<Leader>d', ':Telescope diagnostics<CR>', {noremap = true, silent = true})
-map('n', '<Leader>cb', ':Telescope git_branch<CR>', {noremap = true, silent = true})
+local builtin = require('telescope.builtin')
+map = vim.keymap.set
+
+map('n', '<C-p>', builtin.find_files, {noremap = true, silent = true})
+map('n', '<C-g>', builtin.live_grep, {noremap = true, silent = true})
+map('n', '<C-b>', builtin.buffers, {noremap = true, silent = true})
+map('n', '<space>o', builtin.oldfiles, {noremap = true, silent = true})
+map('n', '<space>d', builtin.diagnostics, {noremap = true, silent = true})
+map('n', '<space>gb', builtin.git_branches, {noremap = true, silent = true})
 
 -- You dont need to set any of these options. These are the default ones. Only
 -- the loading is important
@@ -16,7 +17,7 @@ require('telescope').setup {
       fuzzy = true,                    -- false will only do exact matching
       override_generic_sorter = true,  -- override the generic sorter
       override_file_sorter = true,     -- override the file sorter
-      case_mode = "ignore_case",        -- or "ignore_case" or "respect_case"
+      case_mode = "smart_case",        -- or "ignore_case" or "respect_case"
                                        -- the default case_mode is "smart_case"
     }
   }

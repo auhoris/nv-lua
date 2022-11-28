@@ -1,14 +1,14 @@
 local map = vim.api.nvim_set_keymap
-map('n', '<Space>', '<NOP>', {noremap = true, silent = true})
+-- map('n', '<Space>', '<NOP>', {noremap = true, silent = true})
 vim.g.mapleader = ','
 
 --no hl
-map('n', '<Leader>h', ':set hlsearch!<CR>', {noremap = true, silent = true})
+map('n', '<space>h', ':set hlsearch!<CR>', {noremap = true, silent = true})
 
 
 --quit and save mappings
---map('n', '<C-s>', ':w<CR>', {noremap = true, silent = true})
-map('n', '<C-q>', ':q!<CR>', {noremap = true, silent = true})
+map('n', '<space>w', ':w<CR>', {noremap = true, silent = true})
+map('n', '<space>q', ':q!<CR>', {noremap = true, silent = true})
 
 -- Better window movement
 map('n', '<C-h>', '<C-w>h', {silent = true})

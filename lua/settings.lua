@@ -25,6 +25,8 @@ vim.cmd('set sw=4')
 -- search
 vim.o.ignorecase=true
 
+vim.cmd('set wrap tw=120')
+
 ---- Good indenting for python code
 --[[ vim.bo.autoindent = true
 vim.bo.smartindent = true

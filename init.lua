@@ -3,10 +3,11 @@
 
 --lsp
 require('lsp')
--- require('lsp.saga') -- works slow
-require('lsp.goto_prev')
 require('lsp.lua-ui')
---require('nv-navigator') -- too bright, but looks awesome
+require('nv-mason')
+require('nv-aerials')
+--rust
+-- require('nv-rt')
 
 require('plugins')
 require('keymappings')
@@ -17,21 +18,20 @@ require('settings')
 require('nv-cmp')
 require('nv-treesitter')
 require('nv-treesitter.context')
-require('nv-fzf')
-require('nv-gitsigns')
+-- require('nv-fzf')
+require('nv-telescope')
 require('nv-barbar')
 require('nv-autopairs')
 require('nv-kommentary')
 require('nv-hop')
--- require('nv-startify')
 require('nv-ultisnips')
 require('nv-dashboard')
 require('nv-nvimtree')
--- require('nv-toggleterm')
 require('nv-lualine')
 require('nv-neoformat')
 require('nv-vimformat')
 require('nv-lspkind')
+
 --[[ require('nv-dap')
 require('nv-dap.keymappings')
 require('nv-dap.dap-ui') ]]
@@ -42,6 +42,4 @@ vim.cmd('source ~/.config/nvim/vimscript/42header.vim')
 vim.cmd('source ~/.config/nvim/vimscript/trail_wspace.vim')
 vim.cmd('source ~/.config/nvim/vimscript/folding.vim')
 vim.cmd('packadd! gruvbox-material')
--- vim.cmd('source ~/.config/nvim/vimscript/bg.vim')
--- vim.cmd('source ~/.config/nvim/vimscript/python.vim')
 

@@ -23,8 +23,8 @@ local on_attach = function(client, bufnr)
   map('n','<space>ca','<cmd>lua vim.lsp.buf.code_action()<CR>')
   map('n', '<space>e', '<cmd>lua vim.diagnostic.open_float()<CR>')
   map('n','<space>rn','<cmd>lua vim.lsp.buf.rename()<CR>')
-  map('n','<leader>gi','<cmd>lua vim.lsp.buf.incoming_calls()<CR>')
-  map('n','<leader>go','<cmd>lua vim.lsp.buf.outgoing_calls()<CR>')
+  map('n','<space>gi','<cmd>lua vim.lsp.buf.incoming_calls()<CR>')
+  map('n','<space>go','<cmd>lua vim.lsp.buf.outgoing_calls()<CR>')
   map('n', 'gh', "<cmd>lua require'lspsaga.provider'.lsp_finder()<CR>")
   map('i','<C-k>', "<cmd>lua require('lspsaga.signaturehelp').signature_help()<CR>")
 
@@ -48,13 +48,14 @@ end
 
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()
-capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
+capabilities = require('cmp_nvim_lsp').default_capabilities()
 
 -- Use a loop to conveniently call 'setup' on multiple servers and
 -- map buffer local keybindings when the language server attaches
 local servers = {
     'clangd',
 	'pyright',
+	'cmake',
 }
 
 for _, lsp in ipairs(servers) do
@@ -63,3 +64,40 @@ for _, lsp in ipairs(servers) do
     capabilities = capabilities,
   }
 end
+
+-- Configure LSP through rust-tools.nvim plugin.
+-- rust-tools will configure and enable certain LSP features for us.
+-- See https://github.com/simrat39/rust-tools.nvim#configuration
+local opts = {
+  tools = {
+    runnables = {
+      use_telescope = true,
+    },
+    inlay_hints = {
+      auto = true,
+      show_parameter_hints = false,
+      parameter_hints_prefix = "",
+      other_hints_prefix = "",
+    },
+  },
+
+  -- all the opts to send to nvim-lspconfig
+  -- these override the defaults set by rust-tools.nvim
+  -- see https://github.com/neovim/nvim-lspconfig/blob/master/CONFIG.md#rust_analyzer
+  server = {
+    -- on_attach is a callback called when the language server attachs to the buffer
+    on_attach = on_attach,
+    settings = {
+      -- to enable rust-analyzer settings visit:
+      -- https://github.com/rust-analyzer/rust-analyzer/blob/master/docs/user/generated_config.adoc
+      ["rust-analyzer"] = {
+        -- enable clippy on save
+        checkOnSave = {
+          command = "clippy",
+        },
+      },
+    },
+  },
+}
+
+require("rust-tools").setup(opts)

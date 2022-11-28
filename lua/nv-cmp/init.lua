@@ -79,32 +79,13 @@ cmp.setup {
         fallback()
       end
     end,
-    --[[ ['<Tab>'] = function(fallback)
-      if vim.fn.pumvisible() == 1 then
-        vim.fn.feedkeys(vim.api.nvim_replace_termcodes('<C-n>', true, true, true), 'n')
-      else
-        fallback()
-      end
-    end, ]]
-    --[[ ['<S-Tab>'] = function(fallback)
-      if vim.fn.pumvisible() == 1 then
-        vim.fn.feedkeys(vim.api.nvim_replace_termcodes('<C-p>', true, true, true), 'n')
-      elseif luasnip.jumpable(-1) then
-        vim.fn.feedkeys(vim.api.nvim_replace_termcodes('<Plug>luasnip-jump-prev', true, true, true), '')
-      else
-        fallback()
-      end
-    end, ]]
   },
   sources = {
     { name = 'nvim_lsp' },
     { name = 'treesitter'},
     { name = 'path' },
     { name = 'buffer'},
-    { name = 'luasnip'},
-    { name = 'vsnip'},
-    { name = 'ultisnips'},
---    { name = 'cmp_tabnine'},
---    { name = 'nvim_lua'},
+	{ name = 'nvim_lsp_signature_help' },
+	{ name = 'luasnip' },
   },
 }

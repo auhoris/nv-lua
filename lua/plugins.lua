@@ -23,41 +23,27 @@ return require('packer').startup(function()
 
 -- LSP
   use 'neovim/nvim-lspconfig'
-  --use 'kabouzeid/nvim-lspinstall'
   use { 'tami5/lspsaga.nvim' }
-  use {'ray-x/navigator.lua', requires = {'ray-x/guihua.lua', run = 'cd lua/fzy && make'}}
-  --use 'onsails/lspkind-nvim'
   use { 'ray-x/lsp_signature.nvim'}
   use { 'rmagatti/goto-preview' }
   use {'kevinhwang91/nvim-bqf'}
-
--- Linters and formatters
-  --[[ use 'mindriot101/vim-yapf'
-  use 'nvie/vim-flake8'
-  use 'sbdchd/neoformat'    -- Clang formatter
-  use 'rhysd/vim-clang-format' ]]
-
-  -- Python
-  --[[ use {'Shougo/deoplete.nvim', run = ':UpdateRemotePlugins' }
-  use 'roxma/nvim-yarp'
-  use 'roxma/vim-hug-neovim-rpc' ]]
-  -- use 'davidhalter/jedi-vim'
+--LSP installer
+  use { "williamboman/mason.nvim" }
+  use { 'stevearc/aerial.nvim' }
+  -- use {'ray-x/navigator.lua', requires = {'ray-x/guihua.lua', run = 'cd lua/fzy && make'}}
+  -- rust
+  use 'simrat39/rust-tools.nvim'
 
 -- Completion and snippets
   use {'hrsh7th/nvim-cmp',
       requires = {
 		"hrsh7th/cmp-nvim-lsp",
         "hrsh7th/cmp-buffer",
-        "hrsh7th/cmp-nvim-lsp",
-        "saadparwaiz1/cmp_luasnip",
-        "L3MON4D3/LuaSnip",
-        "quangnguyen30192/cmp-nvim-ultisnips",
+		"hrsh7th/cmp-nvim-lsp-signature-help",
+		"hrsh7th/cmp-path",
+		'L3MON4D3/LuaSnip',
+		"saadparwaiz1/cmp_luasnip",
       }}
-  use 'honza/vim-snippets'
-  use 'hrsh7th/vim-vsnip'
-  use 'hrsh7th/vim-vsnip-integ'
-  use 'hrsh7th/cmp-vsnip'
-  use 'SirVer/ultisnips'
 
 -- Treesitter
   use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
@@ -66,25 +52,24 @@ return require('packer').startup(function()
 -- Colorschemes
   use 'christianchiarulli/nvcode-color-schemes.vim'
   use 'sainnhe/gruvbox-material'
-  --[[ use 'mhartington/oceanic-next'
-  use 'sainnhe/sonokai'
-  use 'RRethy/nvim-base16'
-  use 'Th3Whit3Wolf/one-nvim' ]]
   use 'tanvirtin/monokai.nvim'
 
 -- Telescope
   use 'nvim-lua/popup.nvim'
   use 'nvim-lua/plenary.nvim'
---  use {'romgrk/fzy-lua-native', run = 'make' }
---  use 'nvim-telescope/telescope.nvim'
---  use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
---  use { 'nvim-telescope/telescope-dap.nvim' }
+  use {
+  'nvim-telescope/telescope.nvim', tag = '0.1.0',
+  -- or                            , branch = '0.1.x',
+  requires = { {'nvim-lua/plenary.nvim'} }
+  }
+  use {'nvim-telescope/telescope-fzf-native.nvim',
+	  run = 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build'
+  }
 
 -- Fzf
-  use { 'ibhagwan/fzf-lua',
-  -- optional for icon support
-  requires = { 'kyazdani42/nvim-web-devicons' }
-}
+  --[[ use { 'ibhagwan/fzf-lua', -- optional for icon support
+	  requires = { 'kyazdani42/nvim-web-devicons' }
+  } ]]
 
 -- UI
   use 'romgrk/barbar.nvim'
@@ -99,13 +84,9 @@ return require('packer').startup(function()
   use 'b3nj5m1n/kommentary'
   use 'windwp/nvim-autopairs'
   use 'phaazon/hop.nvim'
-  -- use 'mhinz/vim-startify'
   use 'brooth/far.vim'
-  -- use 'voldikss/vim-floaterm'
-  -- use '42Paris/42header'
   use 'akinsho/toggleterm.nvim'
   use { 'cappyzawa/trim.nvim' }
-  -- use 'pbondoer/vim-42header'
 
 -- Something for git
   use 'lewis6991/gitsigns.nvim'
